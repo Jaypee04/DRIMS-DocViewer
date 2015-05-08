@@ -1,0 +1,300 @@
+﻿body {
+  	background:  url(images/bg.jpg); 
+	margin: 0 auto;
+	padding-top:20px;
+	font-family: Verdana,;
+	font-size: 12px;
+  	color: #333333;
+  	}
+	
+a {
+	color:#007fd0;
+	text-decoration:none
+	}
+	
+a:hover {
+	background-color:#a9e3f7;
+	text-decoration:none;
+	}
+ 
+h1 {
+	text-align: center;
+	font-size: 24px; 
+	font-weight: bold ;
+	font-family: "Century Gothic"; 
+	padding: 10px 0px 10px 0px; 
+    }
+ 
+h2 {
+	text-align: center;
+	font-size: 20px; 
+	font-weight: bold ;
+	font-family: "Century Gothic"; 
+	padding: 10px 0px 10px 0px; 
+    }
+ 
+h3 {
+	text-align: left;
+	font-size: 16px; 
+	font-weight: bold ;
+	font-family: "Century Gothic"; 
+	padding: 0px 0px 0px 0px; 
+    }
+
+p {  
+  	font-family: Verdana;
+	font-size: 12px;
+  	text-align: left;
+	line-height: 18px;
+	}
+	
+table { 
+	width: 100%;
+	margin: 0 auto;
+  	font-family: Verdana;
+	font-size: 12px;
+  	}
+	 
+hr {
+	color:navy;
+	}  
+	
+.button {	
+	font-size: 11px;
+	font-family:  Verdana, Tahoma;
+	font-weight: bold;
+	color: #333;
+	height: 25px;
+	line-height: 0px; 
+	text-align: center;
+	margin:0 auto; 
+	width: 80px;
+	/*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a9e3f7', endColorstr='#007fd0'); 
+	background: -moz-linear-gradient(top,  #a9e3f7,  #007fd0); 
+	background: -webkit-gradient(linear, left top, left bottom, from(#a9e3f7), to(#007fd0)); */
+	}
+ 
+.gridHeader {
+	text-align: center;
+	font-size: 12px; 
+	font-weight: bold ;
+	padding: 10px 0px 10px 0px; 
+    }
+	
+	
+	
+
+/**************/
+/*LOGIN STYLES*/	
+/**************/
+
+#contentBody { 
+	width: 1000px;
+	margin: 0 auto;
+	text-align: center;
+	}
+
+#bgAccess {
+    background-color: #007fd0;
+    width: 600px;
+    margin: 0 auto;
+	color: #ffffff;
+	letter-spacing: 1px;
+	} 
+
+#bgHeader {
+    width: 1000px;
+    margin: 0 auto;
+	}	
+
+#contentBody { 
+	width: 90%;
+	margin: 0 auto;
+	}
+
+.pageTitle {
+	font-size:30px; 
+	font-weight: bold ;	
+	font-family: Trebuchet MS;
+	}
+
+.gridTitle {
+	font-size:12px; 
+	font-weight: bold ;	
+	font-family: Trebuchet MS;
+	text-align: center;
+	}
+
+.tableTitle {
+	text-align:center;
+	font-size:12px; 
+	font-weight: bold ;	
+	font-family: Trebuchet MS;
+	}
+
+.FooterText {
+	color:#333333;
+	text-align:center;
+	font-size:10px; 
+	font-weight: bold ;
+	font-family: Century Gothic;
+	}
+	
+.menuItems {font-size:10px; 
+	font-weight: bold ;	
+	font-family: verdana;
+	}
+
+.rightText {color : #8b0000; 
+  	font-family: Verdana;
+  	font-size:8px;
+  	text-align: right;	
+	}
+
+.leftText {color : #8b0000; 
+  	font-family: Verdana;
+  	font-size:10px;
+  	text-align: right;	
+	}
+
+
+.textBold {font-size:10px; 
+	font-weight: bold ;	
+	font-family: verdana;	
+	}
+	
+.textMessage { color : #8b0000;
+	font-weight: bold ;
+	font-family : Tahoma ;
+    font-size : 10px ;    
+}
+
+.forbuttons {font-size:10px; 
+	font-weight: bold ;	
+	font-family: tahoma;
+	width:120px;
+	}
+
+.forRPTbuttons {font-size:10px; 
+	font-weight: bold ;	
+	font-family: tahoma;
+	width:300px;
+	vertical-align :middle
+	}
+	
+.forTableField { font-family: tahoma;
+	font-weight: 600 ;
+	font-size:11px; 
+	width:150px;
+	background-color:#e1eafc;
+}
+	
+.forTableValue { font-family: tahoma;
+	font-weight: normal ;	
+	font-size:11px; 
+	width:200px;
+	/*background-color:#999999;*/
+}	
+
+.forTableReadOnly{ font-family: tahoma;
+	font-weight: normal ;	
+	font-size:11px; 
+	width:200px;
+	background-color:#e1eafc; 
+}
+
+#welcome {
+  	font-family: "Trebuchet MS";
+  	font-size: 20px;
+  	color: #333333;
+  	text-align: justify;
+	}		
+  	
+/* a:link     {color:#0066cc} /*dark red*/
+/* a:visited  {color:#0066cc} */
+/* a:hover    {color:#ff6600}*/
+/* a:active   {color:red}*/
+    	
+.menuSub {
+	margin-top: 50px;
+	font: 12px Century Gothic;
+	text-decoration: none;	
+	text-align: center;
+	}
+
+.menuSub a {
+	width: 100%;
+	padding: 5px 5px 5px 5px;
+	border: 1px ridge #cccccc;
+	text-align:center;
+	background-color: #007fd0;
+	color: #ffffff;
+	font-weight: bold;
+  }
+
+.menuSub a:hover {
+	background-color: #a9e3f7;
+	color: #333333;
+	text-decoration: none;
+  }
+  
+.menuSubM {
+	font: 12px Century Gothic;
+	text-decoration: none;	
+	}
+.menuSubM a {
+	border: 1px ridge #cccccc;
+	padding: 5px 5px 5px 5px;
+	border-right: 1px dotted #cccccc;
+	text-align:center;
+	background-color: #336633;
+	color: #ffffff;
+	text-decoration: none;
+  }
+  
+.menuSubM a:visited {
+	border: 1px ridge #cccccc;
+	background-color: #336633;
+	color: #ffffff;
+	text-decoration: none;
+  }
+
+.menuSubM a:hover {
+	border: 1px ridge #cccccc;
+	background-color: #cccccc;
+	color: #0066CC;
+	text-decoration: none;
+  }
+
+.menuSubA a {
+	display: block;
+	padding: 5px 5px 5px 5px;
+	border-right: 1px dotted #cccccc;
+	text-align:center;
+	background-color: #ffcc00;
+	color: #000000;
+	text-decoration: none;
+  }
+  
+.menuSubA a:visited {
+	display: block;
+	background-color: #ffcc00;
+	color: #000000;
+	text-decoration: none;
+  }
+
+.menuSubA a:hover {
+	display: block;
+	background-color: #cccccc;
+	color: #0066CC;
+	text-decoration: none;
+  }
+ 
+
+.footerText {
+	color:#333333;
+	text-align:center;
+	font-size:10px; 
+	font-weight: bold ;
+	font-family: Century Gothic;
+	}

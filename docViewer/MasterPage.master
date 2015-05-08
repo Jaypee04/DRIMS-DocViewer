@@ -1,0 +1,86 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<title>namria</title>
+  
+<link href="adminStyle.css" rel="stylesheet" type="text/css" />
+   
+</head>
+<body>
+
+<form id="form1" runat="server">
+        
+<div class="">
+    
+<div class="toolbar">
+        
+        <table style="width:800px; height: 30px;">
+        <tr>
+            <td style="width:30px;">l.hdsoufgp; ogufepoguiwe'noribn q[gbnie'[</td>
+            <td class="style1"><asp:Label ID="Label1" runat="server" Text="Welcome:" style="font-family: Verdana; font-size: 12px; text-align: right" Font-Bold="True" Font-Size="Larger" ForeColor="Black"></asp:Label></td>
+            <td class="style2" style="width: 250px"><asp:Label ID="Label2" runat="server" style="font-family: Verdana; font-size: 12px; margin-left: 0px;" Width="220px" Font-Bold="True" ForeColor="#FF6600"></asp:Label>
+                <asp:Label ID="lblTime" runat="server" Text="Label" Visible = "false"></asp:Label></td>
+            <td><div id="menuSub" style="text-align: right">
+                <asp:Button ID="cmdAddUser" runat="server" Font-Bold="True" Font-Size="XX-Small" Height="16px" Text="VIEW/ADD USER" />&nbsp;|
+                <asp:Button ID="cmdDocument" runat="server" height = "16px" PostBackUrl="~/Document Browse.aspx" Text="MANAGE DOCUMENT" ToolTip="Save" Font-Bold="True" Font-Size="XX-Small"></asp:Button>&nbsp;|
+                <asp:Button ID="cmdSearch" runat="server" Height="16px" Text="SEARCH" ToolTip="Search File" Font-Bold="True" Font-Size="XX-Small" PostBackUrl="~/AdvancedSearch.aspx" />&nbsp;|
+                <asp:Button ID="cmdLogout" runat="server" Height="16px" Text="LOGOUT" ToolTip="LogOut" Font-Bold="True" Font-Size="XX-Small" />
+                        
+</div>
+                </td>
+                
+            </tr>
+         </table>
+        <%--</div>--%>
+        
+    </div>
+    <div class="">
+        <div class="toolbar"></div>
+    </div>
+        
+        <div class="dataentry">
+           
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                ConnectionString="<%$ ConnectionStrings:DOCTRACKConnectionString %>" 
+                SelectCommand="SELECT * FROM [User_Library] WHERE EmployeeID='@EmployeeID'">
+            </asp:SqlDataSource>
+            <div>
+                <div style=" margin-left:auto; margin-right:auto; width:730px;">
+                    <asp:ContentPlaceHolder ID="main" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="footer" id="footer">
+    <br />
+    <br />
+            
+        
+        <asp:Button ID="btnDeleted" runat="server" Height="18px" Text="DELETED DOCUMENT" 
+                        ToolTip="View Deleted Document" Font-Bold="True" Font-Size="XX-Small" 
+                        PostBackUrl="~/DeletedDocumentView.aspx" Visible="False" 
+        Width="190px" />
+            
+        
+        <asp:Button ID="btnDeepSearch" runat="server" Height="18px" Text="SEARCH FOR DOCUMENT" 
+                        ToolTip="Advance Search for Document" Font-Bold="True" Font-Size="XX-Small" 
+                        Visible="False" Width="190px" />
+        <br />
+    <br />
+    <br />
+    <asp:DropDownList ID="DropDownList1" runat="server" BackColor="White" 
+        DataSourceID="SqlDataSource1" DataTextField="Full" DataValueField="EmployeeID" 
+        Enabled="False" ForeColor="White" Height="0px" Width="0px" Visible="False">
+    </asp:DropDownList>
+    <asp:Label ID="lblCopyright" runat="server" Text="Copyright © 2012 NAMRIA" ForeColor="Black"></asp:Label>
+    <br />
+</div>
+
+</form>
+</body>
+</html>

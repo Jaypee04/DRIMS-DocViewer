@@ -1,0 +1,72 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage3.master.vb" Inherits="MasterPage3" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+
+<title>Document Viewer</title>
+  
+<link href="adminStyle.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+<div id="contentBody">
+<form id="form1" runat="server">
+
+<div style="background-color:#cccccc; height:30px; border:1px #666666 dashed; padding:10px 10px 0px 10px; margin-bottom:15px; filter:alpha(opacity=50); -moz-opacity 0.5; -khtml-opacity:0.5; opacity:0.5;">
+<table border="0"> 
+	<tr><td style="width: 700px; text-align: left;">
+			<asp:Label ID="Label1" runat="server" Text="You are logged in as:"></asp:Label>&nbsp;
+			<asp:Label ID="Label2" runat="server" Font-Bold="True" ForeColor="#009933"></asp:Label>
+            <asp:Label ID="lblTime" runat="server" Text="Label" Visible = "false"></asp:Label></td>
+        <td style="width:90px; height: 15px;"><asp:linkbutton ID="lnkRectrack" runat="server">RECORD TRACKER</asp:linkbutton></td>
+        <td style="width:80px; height: 15px;"><asp:linkbutton ID="lnkManual" runat="server">USER'S MANUAL</asp:linkbutton></td>
+        <td style="width:50px; height: 15px;"><asp:linkbutton ID="lnkLogout" runat="server">LOGOUT</asp:linkbutton></td></tr>
+</table>
+</div>
+    
+<div><asp:Image ID="Image1" runat="server" ImageUrl="~/App_Themes/Images//DRIMs/drimsBannerDocViewer.png" /></div>
+        
+<div class="menuSub">
+<center>
+	<asp:LinkButton ID="lnkbtnAddUser" runat="server" Width="160px">VIEW/ADD USER</asp:LinkButton>
+    <asp:LinkButton ID="lnkbtnDocument" runat="server" Width="160px" ToolTip="Manage Document" PostBackUrl="~/Document Browse.aspx">MANAGE</asp:LinkButton>
+    <asp:LinkButton ID="lnkbtnSearch" runat="server" Width="160px" ToolTip="Search File" PostBackUrl = "~/AdvancedSearch.aspx">SEARCH</asp:LinkButton> 
+    <asp:LinkButton ID="lnkbtnDeleted" runat="server" Width="160px" Text="DELETED DOCUMENT" ToolTip="View Deleted Document" PostBackUrl="~/DeletedDocumentView.aspx" Visible="False">DELETED DOCUMENT</asp:LinkButton> 
+    <asp:LinkButton ID="lnkbtnDocType" runat="server" Width="160px" PostBackUrl="~/Document Type.aspx" ToolTip="View Document Type library" Visible="False">DOCUMENT TYPE</asp:LinkButton>
+</center>                    
+</div>  
+
+<div class="dataentry">
+	<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DOCTRACKConnectionString %>" 
+    	SelectCommand="SELECT * FROM [User_Library] WHERE Employee_ID='@EmployeeID'">
+    	<SelectParameters>
+    		<asp:SessionParameter Name="Employee_ID" SessionField="@Employee_ID" />
+    	</SelectParameters>
+    </asp:SqlDataSource>
+		<div>
+            <asp:ContentPlaceHolder ID="main" runat="server"></asp:ContentPlaceHolder>
+        </div>
+</div>
+
+<br /><br /><br /><br /><br /><br /><br /><br />
+<div class="footerText" style="padding: 10px 0px 10px 0px;">
+    <asp:DropDownList ID="DropDownList1" runat="server" BackColor="White" 
+        DataSourceID="SqlDataSource1" DataTextField="Full" DataValueField="EmployeeID" 
+        Enabled="False" ForeColor="White" Height="0px" Width="0px" Visible="False">
+    </asp:DropDownList>
+    
+             D O C U M E N T &nbsp;&nbsp; A N D &nbsp;&nbsp; R E C O R D &nbsp;&nbsp;  I N F O R M A T I O N  &nbsp;&nbsp; M A N A G E M E N T &nbsp;&nbsp; S Y S T E M
+        <br />
+        S y s t e m s &nbsp;&nbsp;  D e v e l o p m e n t  &nbsp;&nbsp; a n d  &nbsp;&nbsp; P r o g r a m m i n g &nbsp;&nbsp;  D i v i s i o n<br />
+        I n f o r m a t i o n &nbsp;&nbsp;  M a n a g e m e n t  &nbsp;&nbsp; D e p a r t m e n t <br /><br /><br />
+
+
+</div>
+</body>
+</form>
+</html>
